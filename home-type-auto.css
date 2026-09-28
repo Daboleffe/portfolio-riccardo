@@ -1,0 +1,1025 @@
+/* ==========================================================
+   RICCARDO PORTFOLIO
+   HOME HERO — PORTFOLIO REVEAL V2
+
+   SEQUENZA:
+
+   1. Clic su ENTER
+   2. Entra la HOME
+   3. Immagine completamente luminosa
+   4. Animazione di apparizione / zoom
+   5. L'immagine rimane luminosa per qualche secondo
+   6. L'immagine si oscura gradualmente
+   7. Compare PORTFOLIO in stampatello
+========================================================== */
+
+
+/* ==========================================================
+   01 — HERO WRAPPER
+========================================================== */
+
+.home-page.home-portfolio-page
+.home-type-hero {
+
+    position: relative !important;
+
+    box-sizing: border-box !important;
+
+    width: 100% !important;
+
+    min-height:
+        calc(
+            100svh - 68px
+        )
+        !important;
+
+    padding-top:
+        clamp(
+            16px,
+            1.8vh,
+            26px
+        )
+        !important;
+
+    padding-bottom:
+        clamp(
+            24px,
+            2.8vh,
+            38px
+        )
+        !important;
+
+    display:
+        flex
+        !important;
+
+    flex-direction:
+        column
+        !important;
+
+    overflow:
+        visible
+        !important;
+
+}
+
+
+/* ==========================================================
+   02 — NASCONDI 00 / PORTFOLIO + ITALY / 2026
+========================================================== */
+
+.home-page.home-portfolio-page
+.home-type-hero-meta {
+
+    display:
+        none
+        !important;
+
+}
+
+
+/* ==========================================================
+   03 — AREA PRINCIPALE HERO
+========================================================== */
+
+.home-page.home-portfolio-page
+.home-hero-main {
+
+    position:
+        relative
+        !important;
+
+    z-index:
+        5
+        !important;
+
+
+    flex:
+        1 1 auto
+        !important;
+
+
+    box-sizing:
+        border-box
+        !important;
+
+
+    width:
+        100%
+        !important;
+
+
+    min-width:
+        0
+        !important;
+
+    min-height:
+        0
+        !important;
+
+
+    margin:
+        0
+        !important;
+
+
+    /*
+       Riduciamo lo spazio sopra e sotto
+       perché abbiamo eliminato i meta superiori.
+    */
+
+    padding:
+        clamp(
+            16px,
+            2vh,
+            24px
+        )
+        0
+        clamp(
+            20px,
+            2.5vh,
+            32px
+        )
+        !important;
+
+
+    display:
+        flex
+        !important;
+
+
+    align-items:
+        center
+        !important;
+
+
+    justify-content:
+        center
+        !important;
+
+
+    overflow:
+        visible
+        !important;
+
+}
+
+
+/* ==========================================================
+   04 — FRAME IMMAGINE
+
+   LARGHEZZA = IDENTICA A PRIMA
+   ALTEZZA = PIÙ GRANDE
+========================================================== */
+
+.home-page.home-portfolio-page
+.home-hero-visual {
+
+    position:
+        relative
+        !important;
+
+
+    box-sizing:
+        border-box
+        !important;
+
+
+    width:
+        100%
+        !important;
+
+
+    /*
+       Prima era circa 61vh.
+       Ora è più alta, ma non più larga.
+    */
+
+    height:
+        clamp(
+            620px,
+            70vh,
+            790px
+        )
+        !important;
+
+
+    margin:
+        0
+        !important;
+
+
+    padding:
+        0
+        !important;
+
+
+    overflow:
+        hidden
+        !important;
+
+
+    background:
+        #0a0a0a
+        !important;
+
+
+    isolation:
+        isolate
+        !important;
+
+
+    /*
+       Stato PRIMA dell'ingresso.
+    */
+
+    opacity:
+        0
+        !important;
+
+
+    transform:
+        translate3d(
+            0,
+            24px,
+            0
+        )
+        scale(
+            0.992
+        )
+        !important;
+
+
+    transition:
+
+        opacity
+        900ms
+        ease,
+
+        transform
+        1500ms
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+
+        !important;
+
+}
+
+
+/* ==========================================================
+   05 — FRAME VISIBILE
+========================================================== */
+
+.home-page.home-portfolio-page.home-hero-visible
+.home-hero-visual {
+
+    opacity:
+        1
+        !important;
+
+
+    transform:
+        translate3d(
+            0,
+            0,
+            0
+        )
+        scale(
+            1
+        )
+        !important;
+
+}
+
+
+/* ==========================================================
+   06 — IMMAGINE
+
+   IMPORTANTE:
+   nessuna oscurità durante l'entrata.
+========================================================== */
+
+.home-page.home-portfolio-page
+.home-hero-image {
+
+    position:
+        absolute
+        !important;
+
+
+    z-index:
+        1
+        !important;
+
+
+    inset:
+        0
+        !important;
+
+
+    display:
+        block
+        !important;
+
+
+    width:
+        100%
+        !important;
+
+
+    height:
+        100%
+        !important;
+
+
+    max-width:
+        none
+        !important;
+
+
+    margin:
+        0
+        !important;
+
+
+    padding:
+        0
+        !important;
+
+
+    border:
+        0
+        !important;
+
+
+    object-fit:
+        cover
+        !important;
+
+
+    object-position:
+        center center
+        !important;
+
+
+    /*
+       IMMAGINE COMPLETAMENTE ACCESA.
+    */
+
+    opacity:
+        1
+        !important;
+
+
+    filter:
+        none
+        !important;
+
+
+    /*
+       Zoom iniziale.
+    */
+
+    transform:
+        scale(
+            1.045
+        )
+        !important;
+
+
+    transition:
+
+        transform
+        2000ms
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+
+        !important;
+
+
+    user-select:
+        none
+        !important;
+
+
+    -webkit-user-select:
+        none
+        !important;
+
+
+    -webkit-user-drag:
+        none
+        !important;
+
+}
+
+
+/* ==========================================================
+   07 — ZOOM COMPLETATO
+========================================================== */
+
+.home-page.home-portfolio-page.home-hero-visible
+.home-hero-image {
+
+    transform:
+        scale(
+            1
+        )
+        !important;
+
+}
+
+
+/* ==========================================================
+   08 — OSCURAMENTO
+
+   ::before viene usato ESCLUSIVAMENTE
+   come filtro scuro.
+
+   TIMING:
+   circa 3.2 secondi dopo l'apparizione.
+========================================================== */
+
+.home-page.home-portfolio-page
+.home-hero-visual::before {
+
+    content:
+        ""
+        !important;
+
+
+    position:
+        absolute
+        !important;
+
+
+    z-index:
+        2
+        !important;
+
+
+    inset:
+        0
+        !important;
+
+
+    pointer-events:
+        none
+        !important;
+
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.42
+        )
+        !important;
+
+
+    /*
+       Inizialmente COMPLETAMENTE trasparente.
+       Quindi l'immagine appare accesa.
+    */
+
+    opacity:
+        0
+        !important;
+
+
+    transition:
+
+        opacity
+        850ms
+        ease
+        3200ms
+
+        !important;
+
+}
+
+
+/* ==========================================================
+   09 — IMMAGINE SI OSCURISCE
+========================================================== */
+
+.home-page.home-portfolio-page.home-hero-visible
+.home-hero-visual::before {
+
+    opacity:
+        1
+        !important;
+
+}
+
+
+/* ==========================================================
+   10 — PORTFOLIO
+
+   ::after diventa la scritta centrale.
+
+   Compare DOPO che l'immagine ha iniziato
+   ad oscurarsi.
+========================================================== */
+
+.home-page.home-portfolio-page
+.home-hero-visual::after {
+
+    content:
+        "PORTFOLIO"
+        !important;
+
+
+    position:
+        absolute
+        !important;
+
+
+    z-index:
+        4
+        !important;
+
+
+    top:
+        50%
+        !important;
+
+
+    left:
+        50%
+        !important;
+
+
+    width:
+        auto
+        !important;
+
+
+    height:
+        auto
+        !important;
+
+
+    margin:
+        0
+        !important;
+
+
+    padding:
+        0
+        !important;
+
+
+    background:
+        none
+        !important;
+
+
+    color:
+        #ffffff
+        !important;
+
+
+    font-family:
+        "Bebas Neue",
+        "IBM Plex Sans",
+        Arial,
+        Helvetica,
+        sans-serif
+        !important;
+
+
+    font-size:
+        clamp(
+            110px,
+            13vw,
+            245px
+        )
+        !important;
+
+
+    font-weight:
+        400
+        !important;
+
+
+    line-height:
+        0.8
+        !important;
+
+
+    letter-spacing:
+        0.015em
+        !important;
+
+
+    text-transform:
+        uppercase
+        !important;
+
+
+    white-space:
+        nowrap
+        !important;
+
+
+    text-align:
+        center
+        !important;
+
+
+    pointer-events:
+        none
+        !important;
+
+
+    /*
+       Prima della comparsa:
+    */
+
+    opacity:
+        0
+        !important;
+
+
+    filter:
+        blur(
+            10px
+        )
+        !important;
+
+
+    transform:
+        translate(
+            -50%,
+            calc(
+                -50% + 36px
+            )
+        )
+        scale(
+            0.985
+        )
+        !important;
+
+
+    /*
+       Parte circa 3.7 secondi
+       dopo l'apparizione della hero.
+    */
+
+    transition:
+
+        opacity
+        850ms
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        3700ms,
+
+        transform
+        1100ms
+        cubic-bezier(
+            0.16,
+            1,
+            0.3,
+            1
+        )
+        3600ms,
+
+        filter
+        900ms
+        ease
+        3600ms
+
+        !important;
+
+}
+
+
+/* ==========================================================
+   11 — PORTFOLIO VISIBILE
+========================================================== */
+
+.home-page.home-portfolio-page.home-hero-visible
+.home-hero-visual::after {
+
+    opacity:
+        1
+        !important;
+
+
+    filter:
+        blur(
+            0
+        )
+        !important;
+
+
+    transform:
+        translate(
+            -50%,
+            -50%
+        )
+        scale(
+            1
+        )
+        !important;
+
+}
+
+
+/* ==========================================================
+   12 — BOTTOM META
+========================================================== */
+
+.home-page.home-portfolio-page
+.home-type-bottom {
+
+    position:
+        relative
+        !important;
+
+
+    z-index:
+        15
+        !important;
+
+
+    flex:
+        0 0 auto
+        !important;
+
+
+    width:
+        100%
+        !important;
+
+}
+
+
+/* ==========================================================
+   13 — TABLET
+========================================================== */
+
+@media (max-width: 1180px) {
+
+    .home-page.home-portfolio-page
+    .home-hero-main {
+
+        padding-top:
+            20px
+            !important;
+
+
+        padding-bottom:
+            24px
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-visual {
+
+        height:
+            clamp(
+                520px,
+                65vh,
+                680px
+            )
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-visual::after {
+
+        font-size:
+            clamp(
+                82px,
+                12vw,
+                165px
+            )
+            !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   14 — MOBILE
+========================================================== */
+
+@media (max-width: 820px) {
+
+    .home-page.home-portfolio-page
+    .home-type-hero {
+
+        min-height:
+            auto
+            !important;
+
+
+        padding-top:
+            76px
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-main {
+
+        padding:
+            20px
+            0
+            26px
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-visual {
+
+        height:
+            min(
+                70vh,
+                590px
+            )
+            !important;
+
+
+        min-height:
+            440px
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-image {
+
+        object-position:
+            center center
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-visual::after {
+
+        font-size:
+            clamp(
+                58px,
+                16vw,
+                110px
+            )
+            !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   15 — SMALL MOBILE
+========================================================== */
+
+@media (max-width: 520px) {
+
+    .home-page.home-portfolio-page
+    .home-hero-visual {
+
+        height:
+            62vh
+            !important;
+
+
+        min-height:
+            390px
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-visual::after {
+
+        font-size:
+            clamp(
+                48px,
+                15vw,
+                80px
+            )
+            !important;
+
+
+        letter-spacing:
+            0
+            !important;
+
+    }
+
+}
+
+
+/* ==========================================================
+   16 — ACCESSIBILITÀ
+   REDUCED MOTION
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .home-page.home-portfolio-page
+    .home-hero-visual,
+
+    .home-page.home-portfolio-page
+    .home-hero-image,
+
+    .home-page.home-portfolio-page
+    .home-hero-visual::before,
+
+    .home-page.home-portfolio-page
+    .home-hero-visual::after {
+
+        transition:
+            none
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-visual {
+
+        opacity:
+            1
+            !important;
+
+
+        transform:
+            none
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-image {
+
+        transform:
+            none
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-visual::before {
+
+        opacity:
+            1
+            !important;
+
+    }
+
+
+    .home-page.home-portfolio-page
+    .home-hero-visual::after {
+
+        opacity:
+            1
+            !important;
+
+
+        filter:
+            none
+            !important;
+
+
+        transform:
+            translate(
+                -50%,
+                -50%
+            )
+            !important;
+
+    }
+
+}

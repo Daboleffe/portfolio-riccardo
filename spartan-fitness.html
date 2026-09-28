@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Spartan Fitness — Riccardo
+    </title>
+
+
+    <!-- ========================================
+         THEME
+    ======================================== -->
+
+    <script src="theme-toggle.js"></script>
+
+
+    <!-- ========================================
+         STYLES
+    ======================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- ========================================
+         SPARTAN HERO FINAL FIX
+    ======================================== -->
+
+    <style>
+
+        /* ==================================================
+           HERO ALWAYS STARTS DARK
+        ================================================== */
+
+        .spartan-page .spartan-hero,
+        html[data-theme="light"]
+        .spartan-page .spartan-hero {
+
+            background:
+                radial-gradient(
+                    circle at 50% 43%,
+                    rgba(100, 28, 38, 0.33) 0%,
+                    rgba(100, 28, 38, 0.12) 27%,
+                    transparent 56%
+                ),
+                linear-gradient(
+                    180deg,
+                    #111010 0%,
+                    #050505 100%
+                ) !important;
+
+            color:
+                #f0ece5 !important;
+
+            border-color:
+                rgba(
+                    240,
+                    236,
+                    229,
+                    0.08
+                ) !important;
+
+            transition:
+                background 0.8s ease,
+                color 0.8s ease;
+        }
+
+
+        /* ==================================================
+           FINAL STATE
+           Switch to Spartan cream background.
+        ================================================== */
+
+        .spartan-page
+        .spartan-hero.is-final,
+
+        html[data-theme="light"]
+        .spartan-page
+        .spartan-hero.is-final {
+
+            background:
+                #f3eee6 !important;
+
+            color:
+                #111111 !important;
+        }
+
+
+        /* ==================================================
+           BACKGROUND ELEMENTS FADE AT THE END
+        ================================================== */
+
+        .spartan-page
+        .spartan-hero.is-final
+        .spartan-hero-aura {
+
+            opacity:
+                0 !important;
+        }
+
+
+        .spartan-page
+        .spartan-hero.is-final
+        .spartan-outline-symbol {
+
+            opacity:
+                0.055 !important;
+        }
+
+
+        .spartan-page
+        .spartan-hero.is-final
+        .spartan-cracks {
+
+            opacity:
+                0.12 !important;
+        }
+
+
+        .spartan-page
+        .spartan-hero.is-final
+        .spartan-sword-stage {
+
+            opacity:
+                0 !important;
+
+            transition:
+                opacity 0.5s ease;
+        }
+
+
+        .spartan-page
+        .spartan-hero.is-final
+        .spartan-slash-layer {
+
+            opacity:
+                0 !important;
+
+            transition:
+                opacity 0.5s ease;
+        }
+
+
+        /* ==================================================
+           FINAL BRAND CONTAINER
+        ================================================== */
+
+        .spartan-page
+        .spartan-final-brand {
+
+            position:
+                relative;
+
+            z-index:
+                30;
+
+            width:
+                100%;
+
+            max-width:
+                900px;
+
+            padding:
+                30px
+                20px
+                100px;
+
+            display:
+                flex;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            opacity:
+                0;
+
+            pointer-events:
+                none;
+
+            transform:
+                translateY(45px)
+                scale(0.92);
+
+            transition:
+                opacity 0.5s ease,
+                transform 0.9s
+                cubic-bezier(
+                    0.16,
+                    1,
+                    0.3,
+                    1
+                );
+        }
+
+
+        /* ==================================================
+           FINAL LOGO
+        ================================================== */
+
+        .spartan-page
+        .spartan-final-logo-image {
+
+            display:
+                block;
+
+            width:
+                min(
+                    58vw,
+                    650px
+                );
+
+            max-width:
+                90%;
+
+            height:
+                auto;
+
+            margin:
+                0 auto;
+
+            opacity:
+                0;
+
+            transform:
+                translateY(22px)
+                scale(0.88);
+
+            transition:
+                opacity 0.45s ease,
+                transform 0.9s
+                cubic-bezier(
+                    0.16,
+                    1,
+                    0.3,
+                    1
+                );
+
+            filter:
+                drop-shadow(
+                    0
+                    18px
+                    35px
+                    rgba(
+                        0,
+                        0,
+                        0,
+                        0.15
+                    )
+                );
+        }
+
+
+        /* ==================================================
+           LOGO REVEAL
+        ================================================== */
+
+        .spartan-page
+        .spartan-final-brand.is-visible {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0)
+                scale(1);
+        }
+
+
+        .spartan-page
+        .spartan-final-brand.is-visible
+        .spartan-final-logo-image {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0)
+                scale(1);
+        }
+
+
+        /* ==================================================
+           FINAL IMPACT
+        ================================================== */
+
+        .spartan-page
+        .spartan-final-brand.is-impacting
+        .spartan-final-logo-image {
+
+            animation:
+                spartan-full-logo-impact
+                0.52s
+                cubic-bezier(
+                    0.16,
+                    1,
+                    0.3,
+                    1
+                );
+        }
+
+
+        @keyframes spartan-full-logo-impact {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    scale(0.92);
+            }
+
+
+            42% {
+
+                transform:
+                    translateY(-3px)
+                    scale(1.045);
+            }
+
+
+            100% {
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+
+        }
+
+
+        /* ==================================================
+           HERO FOOTER
+        ================================================== */
+
+        .spartan-page
+        .spartan-hero.is-final
+        .spartan-hero-bottom {
+
+            color:
+                rgba(
+                    107,
+                    35,
+                    37,
+                    0.72
+                ) !important;
+        }
+
+
+        /* ==================================================
+           MOBILE
+        ================================================== */
+
+        @media
+        (max-width: 700px) {
+
+            .spartan-page
+            .spartan-final-brand {
+
+                padding:
+                    20px
+                    18px
+                    78px;
+            }
+
+
+            .spartan-page
+            .spartan-final-logo-image {
+
+                width:
+                    min(
+                        82vw,
+                        500px
+                    );
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="spartan-page">
+
+
+
+    <!-- ========================================
+         NAVIGATION
+    ======================================== -->
+
+    <nav class="nav">
+
+
+        <a
+            href="index.html#home"
+            class="nav-logo page-link"
+        >
+            HOME
+        </a>
+
+
+        <div class="nav-links">
+
+
+            <a
+                href="about.html"
+                class="page-link"
+            >
+                ABOUT
+            </a>
+
+
+            <a
+                href="projects.html"
+                class="page-link"
+            >
+                PROJECTS
+            </a>
+
+
+            <a
+                href="contact.html"
+                class="page-link"
+            >
+                CONTACT
+            </a>
+
+
+        </div>
+
+
+    </nav>
+
+
+
+    <!-- ========================================
+         MAIN
+    ======================================== -->
+
+    <main class="spartan-main">
+
+
+        <div class="page-wrapper">
+
+
+
+            <!-- ========================================
+                 HEADER
+            ======================================== -->
+
+            <header class="spartan-header">
+
+
+                <div class="spartan-header-number">
+                    03
+                </div>
+
+
+                <div class="spartan-header-content">
+
+
+                    <h1>
+                        SPARTAN FITNESS
+                    </h1>
+
+
+                    <p>
+                        Brand Identity / 2026
+                    </p>
+
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- ========================================
+                 HERO
+                 FORGE / SLASH REVEAL
+            ======================================== -->
+
+            <section class="spartan-hero-section">
+
+
+                <div
+                    class="spartan-hero"
+                    id="spartan-hero"
+                >
+
+
+
+                    <!-- ========================================
+                         TEXTURE
+                    ======================================== -->
+
+                    <div
+                        class="spartan-hero-texture"
+                        aria-hidden="true"
+                    ></div>
+
+
+
+                    <!-- ========================================
+                         BACKGROUND AURA
+                    ======================================== -->
+
+                    <div
+                        class="spartan-hero-aura"
+                        aria-hidden="true"
+                    ></div>
+
+
+
+                    <!-- ========================================
+                         LARGE BACKGROUND SYMBOL
+                    ======================================== -->
+
+                    <div
+                        class="spartan-outline-symbol-wrap"
+                        aria-hidden="true"
+                    >
+
+
+                        <img
+                            src="assets/images/spartan-fitness/spartan-symbol.svg"
+                            alt=""
+                            class="spartan-outline-symbol"
+                        >
+
+
+                    </div>
+
+
+
+                    <!-- ========================================
+                         SWORDS
+                    ======================================== -->
+
+                    <div
+                        class="spartan-sword-stage"
+                        aria-hidden="true"
+                    >
+
+
+                        <img
+                            src="assets/images/spartan-fitness/sword.png"
+                            alt=""
+                            class="spartan-sword spartan-sword-left"
+                            id="spartan-sword-left"
+                        >
+
+
+                        <img
+                            src="assets/images/spartan-fitness/sword.png"
+                            alt=""
+                            class="spartan-sword spartan-sword-right"
+                            id="spartan-sword-right"
+                        >
+
+
+                    </div>
+
+
+
+                    <!-- ========================================
+                         SLASH MARKS
+                    ======================================== -->
+
+                    <div
+                        class="spartan-slash-layer"
+                        aria-hidden="true"
+                    >
+
+
+                        <span
+                            class="spartan-slash spartan-slash-1"
+                            id="spartan-slash-1"
+                        ></span>
+
+
+                        <span
+                            class="spartan-slash spartan-slash-2"
+                            id="spartan-slash-2"
+                        ></span>
+
+
+                        <span
+                            class="spartan-slash spartan-slash-3"
+                            id="spartan-slash-3"
+                        ></span>
+
+
+                    </div>
+
+
+
+                    <!-- ========================================
+                         IMPACT FLASH
+                    ======================================== -->
+
+                    <div
+                        class="spartan-impact-flash"
+                        id="spartan-impact-flash"
+                        aria-hidden="true"
+                    ></div>
+
+
+
+                    <!-- ========================================
+                         IMPACT RING
+                    ======================================== -->
+
+                    <div
+                        class="spartan-impact-ring"
+                        id="spartan-impact-ring"
+                        aria-hidden="true"
+                    ></div>
+
+
+
+                    <!-- ========================================
+                         SPARKS
+                    ======================================== -->
+
+                    <div
+                        class="spartan-sparks"
+                        id="spartan-sparks"
+                        aria-hidden="true"
+                    ></div>
+
+
+
+                    <!-- ========================================
+                         CRACKS
+                    ======================================== -->
+
+                    <img
+                        src="assets/images/spartan-fitness/cracks.png"
+                        alt=""
+                        aria-hidden="true"
+                        class="spartan-cracks"
+                        id="spartan-cracks"
+                    >
+
+
+
+                    <!-- ========================================
+                         FINAL BRAND
+                         ORIGINAL COMPLETE LOGO
+                    ======================================== -->
+
+                    <div
+                        class="spartan-final-brand"
+                        id="spartan-final-brand"
+                    >
+
+
+                        <img
+                            src="assets/images/spartan-fitness/spartan-logo-full.svg"
+                            alt="Spartan Fitness"
+                            class="spartan-final-logo-image"
+                            loading="eager"
+                            decoding="async"
+                        >
+
+
+                    </div>
+
+
+
+                    <!-- ========================================
+                         HERO FOOTER
+                    ======================================== -->
+
+                    <div class="spartan-hero-bottom">
+
+
+                        <span>
+                            SPARTAN FITNESS / BRAND IDENTITY
+                        </span>
+
+
+                        <span>
+                            2026
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================
+                 PROJECT OVERVIEW
+            ======================================== -->
+
+            <section class="spartan-section">
+
+
+                <div class="spartan-section-top">
+
+
+                    <span class="spartan-label">
+                        PROJECT OVERVIEW
+                    </span>
+
+
+                    <span class="spartan-label">
+                        IDENTITY / GYM / PERFORMANCE
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="spartan-overview-grid">
+
+
+
+                    <!-- TEXT 01 -->
+
+                    <div class="spartan-overview-text">
+
+
+                        <p>
+                            Spartan Fitness è un sistema di identità
+                            visiva forte e deciso, progettato per
+                            comunicare forza, disciplina e progressione
+                            attraverso un linguaggio grafico scuro,
+                            contemporaneo e premium.
+                        </p>
+
+
+                    </div>
+
+
+
+                    <!-- TEXT 02 -->
+
+                    <div class="spartan-overview-text">
+
+
+                        <p>
+                            Il simbolo ispirato al guerriero spartano,
+                            la tipografia atletica e la palette ad alto
+                            contrasto costruiscono un'identità
+                            riconoscibile e flessibile, applicabile
+                            agli spazi della palestra,
+                            all'abbigliamento, alle attrezzature
+                            e alla comunicazione del brand.
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================
+                 MOCKUP 01
+            ======================================== -->
+
+            <section class="spartan-section">
+
+
+                <div class="spartan-showcase-large">
+
+
+                    <img
+                        src="assets/images/spartan-fitness/mockup-01.jpg"
+                        alt="Spartan Fitness main brand application"
+                    >
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================
+                 MOCKUP 02 + 03
+            ======================================== -->
+
+            <section class="spartan-section">
+
+
+                <div class="spartan-gallery-grid">
+
+
+
+                    <!-- MOCKUP 02 -->
+
+                    <div class="spartan-gallery-card">
+
+
+                        <img
+                            src="assets/images/spartan-fitness/mockup-02.jpg"
+                            alt="Spartan Fitness brand application"
+                        >
+
+
+                    </div>
+
+
+
+                    <!-- MOCKUP 03 -->
+
+                    <div class="spartan-gallery-card">
+
+
+                        <img
+                            src="assets/images/spartan-fitness/mockup-03.jpg"
+                            alt="Spartan Fitness brand application"
+                        >
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================
+                 VISUAL APPLICATIONS
+            ======================================== -->
+
+            <section class="spartan-section">
+
+
+                <div class="spartan-section-top">
+
+
+                    <span class="spartan-label">
+                        VISUAL APPLICATIONS
+                    </span>
+
+
+                    <span class="spartan-label">
+                        SPACE / APPAREL / ACCESSORIES
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="spartan-showcase-large">
+
+
+                    <img
+                        src="assets/images/spartan-fitness/mockup-04.jpg"
+                        alt="Spartan Fitness visual applications"
+                    >
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================
+                 IDENTITY DETAILS
+            ======================================== -->
+
+            <section
+                class="
+                    spartan-section
+                    spartan-details-section
+                "
+            >
+
+
+                <div class="spartan-section-top">
+
+
+                    <span class="spartan-label">
+                        IDENTITY DETAILS
+                    </span>
+
+
+                    <span class="spartan-label">
+                        LOGO / TYPOGRAPHY / BRAND SYSTEM
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="spartan-details-grid">
+
+
+
+                    <!-- DETAIL 01 -->
+
+                    <div class="spartan-detail">
+
+
+                        <img
+                            src="assets/images/spartan-fitness/detail-01.svg"
+                            alt="Spartan Fitness logo system"
+                        >
+
+
+                    </div>
+
+
+
+                    <!-- DETAIL 02 -->
+
+                    <div class="spartan-detail">
+
+
+                        <img
+                            src="assets/images/spartan-fitness/detail-02.svg"
+                            alt="Spartan Fitness typography and colour palette"
+                        >
+
+
+                    </div>
+
+
+
+                    <!-- DETAIL 03 -->
+
+                    <div class="spartan-detail">
+
+
+                        <img
+                            src="assets/images/spartan-fitness/detail-03.jpg"
+                            alt="Spartan Fitness graphic system and applications"
+                        >
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- ========================================
+                 BOTTOM NAVIGATION
+            ======================================== -->
+
+            <div class="spartan-bottom-links">
+
+
+                <a
+                    href="projects.html"
+                    class="secondary-link page-link"
+                >
+                    ← BACK TO PROJECTS
+                </a>
+
+
+                <a
+                    href="index.html#home"
+                    class="main-link page-link"
+                >
+                    HOME →
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ========================================
+         JAVASCRIPT
+    ======================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,4628 @@
+/* ==========================================================
+
+   RICCARDO PORTFOLIO
+
+   HOME FIXES — MOSAIC V4
+
+========================================================== */
+
+
+
+
+
+/* ==========================================================
+
+   HERO
+
+========================================================== */
+
+
+
+.home-page.home-portfolio-page .home-type-hero::before,
+
+.home-page.home-portfolio-page .home-type-hero::after {
+
+    content: none !important;
+
+    display: none !important;
+
+}
+
+
+
+.home-page.home-portfolio-page .home-type-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+.home-page.home-portfolio-page .home-type-stage {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.home-page.home-portfolio-page .home-type-hint {
+
+    z-index: 4;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   OVERLAY
+
+========================================================== */
+
+
+
+.home-discipline-overlay {
+
+    z-index: 9990;
+
+}
+
+
+
+.home-discipline-backdrop {
+
+    background: rgba(5, 5, 5, 0.86) !important;
+
+    backdrop-filter: blur(7px) !important;
+
+    -webkit-backdrop-filter: blur(7px) !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   WINDOW
+
+========================================================== */
+
+
+
+.home-discipline-window {
+
+    position: relative;
+
+
+
+    width: min(97vw, 1840px) !important;
+
+    height: min(93svh, 980px) !important;
+
+
+
+    max-width: 1840px !important;
+
+
+
+    overflow: hidden !important;
+
+
+
+    background: #0a0a0a !important;
+
+
+
+    border: 1px solid rgba(255, 255, 255, 0.055) !important;
+
+
+
+    box-shadow:
+
+        0 30px 100px
+
+        rgba(0, 0, 0, 0.50)
+
+        !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   CLOSE
+
+========================================================== */
+
+
+
+.home-discipline-close {
+
+    position: absolute;
+
+
+
+    top: 20px;
+
+    right: 24px;
+
+
+
+    z-index: 100;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   PANEL
+
+========================================================== */
+
+
+
+.home-discipline-panel {
+
+    display: grid !important;
+
+
+
+    grid-template-columns:
+
+        minmax(0, 1.70fr)
+
+        minmax(340px, 0.70fr)
+
+        !important;
+
+
+
+    gap: clamp(28px, 2.6vw, 48px) !important;
+
+
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+
+
+    align-items: center !important;
+
+
+
+    padding:
+
+        clamp(46px, 3.2vw, 62px)
+
+        clamp(22px, 2.4vw, 42px)
+
+        clamp(28px, 2.1vw, 40px)
+
+        !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   IMAGE AREA
+
+========================================================== */
+
+
+
+.home-discipline-images {
+
+    position: relative !important;
+
+
+
+    display: grid !important;
+
+
+
+    height: min(80vh, 800px) !important;
+
+    min-height: 620px !important;
+
+
+
+    align-self: center;
+
+
+
+    overflow: hidden !important;
+
+
+
+    isolation: isolate;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   IMAGE CONTAINERS
+
+========================================================== */
+
+
+
+.home-discipline-images .home-discipline-image {
+
+    position: relative !important;
+
+
+
+    left: auto !important;
+
+    right: auto !important;
+
+    top: auto !important;
+
+    bottom: auto !important;
+
+
+
+    width: auto !important;
+
+    height: auto !important;
+
+
+
+    min-width: 0 !important;
+
+    min-height: 0 !important;
+
+
+
+    max-width: none !important;
+
+    max-height: none !important;
+
+
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+
+
+    display: flex !important;
+
+
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+
+
+    overflow: hidden !important;
+
+
+
+    background: transparent !important;
+
+
+
+    border: 0 !important;
+
+
+
+    box-shadow: none !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   IMAGES
+
+========================================================== */
+
+
+
+.home-discipline-image img {
+
+    display: block !important;
+
+
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+
+
+    max-width: 100% !important;
+
+    max-height: 100% !important;
+
+
+
+    object-fit: contain !important;
+
+    object-position: center center !important;
+
+
+
+    aspect-ratio: auto !important;
+
+
+
+    /*
+       Images now use their real src directly in index.html.
+       They no longer depend on JavaScript adding .is-loaded.
+    */
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+
+
+    transform: none !important;
+
+
+
+    border: 0 !important;
+
+    outline: 0 !important;
+
+
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+
+
+    filter:
+
+        drop-shadow(
+
+            0 14px 26px
+
+            rgba(0, 0, 0, 0.24)
+
+        );
+
+
+
+    transition:
+
+        filter 0.3s ease;
+
+}
+
+
+
+/* Compatibility with any stale loading classes. */
+.home-discipline-image img.is-loaded,
+.home-discipline-image img.is-loading {
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+}
+
+
+
+.home-discipline-image img.is-error {
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   HOVER
+
+========================================================== */
+
+
+
+@media (hover: hover) and (pointer: fine) {
+
+
+
+    .home-discipline-image:hover img {
+
+        filter:
+
+            drop-shadow(
+
+                0 18px 34px
+
+                rgba(0, 0, 0, 0.36)
+
+            );
+
+    }
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   TEXT
+
+========================================================== */
+
+
+
+.home-discipline-copy {
+
+    position: relative;
+
+
+
+    z-index: 20;
+
+
+
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+
+
+    align-self: center;
+
+
+
+    overflow: visible !important;
+
+}
+
+
+
+.home-discipline-copy-number {
+
+    display: block;
+
+
+
+    margin-bottom: 18px;
+
+}
+
+
+
+.home-discipline-copy h2 {
+
+    width: 100% !important;
+
+
+
+    margin: 0 0 28px !important;
+
+
+
+    font-size:
+
+        clamp(
+
+            42px,
+
+            3vw,
+
+            62px
+
+        )
+
+        !important;
+
+
+
+    line-height: 0.92 !important;
+
+
+
+    letter-spacing: -0.045em !important;
+
+
+
+    word-break: normal !important;
+
+    overflow-wrap: normal !important;
+
+}
+
+
+
+.home-discipline-copy p {
+
+    width: 100%;
+
+
+
+    max-width: 430px !important;
+
+
+
+    margin-bottom: 28px;
+
+
+
+    line-height: 1.68;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   TAGS
+
+========================================================== */
+
+
+
+.home-discipline-tags {
+
+    display: flex;
+
+
+
+    flex-wrap: wrap;
+
+
+
+    gap: 8px;
+
+}
+
+
+
+.home-discipline-tags span {
+
+    white-space: nowrap;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   DIGITAL TITLE
+
+========================================================== */
+
+
+
+.home-discipline-panel[data-discipline-panel="digital"]
+
+.home-discipline-copy h2 {
+
+    font-size:
+
+        clamp(
+
+            35px,
+
+            2.45vw,
+
+            51px
+
+        )
+
+        !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   VISUAL IDENTITY
+
+   2 IMMAGINI SIMMETRICHE
+
+   + maggiore spazio dal testo
+
+========================================================== */
+
+
+
+.home-discipline-images-identity {
+
+    width: 92% !important;
+
+
+
+    justify-self: end !important;
+
+
+
+    display: grid !important;
+
+
+
+    grid-template-columns:
+
+        1fr
+
+        1fr
+
+        !important;
+
+
+
+    grid-template-rows:
+
+        auto
+
+        !important;
+
+
+
+    column-gap:
+
+        18px
+
+        !important;
+
+
+
+    row-gap:
+
+        0
+
+        !important;
+
+
+
+    align-items:
+
+        center
+
+        !important;
+
+
+
+    align-content:
+
+        center
+
+        !important;
+
+
+
+/**
+
+       Prima era positivo e spingeva tutto verso il testo.
+
+       Ora spostiamo leggermente il blocco a sinistra.
+
+    */
+
+    transform:
+
+        translateX(-22px)
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   IMAGE 01
+
+========================================================== */
+
+
+
+.home-discipline-images-identity
+
+.home-discipline-image-01 {
+
+    grid-column:
+
+        1;
+
+
+
+    grid-row:
+
+        1;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        100%
+
+        !important;
+
+
+
+    display:
+
+        flex
+
+        !important;
+
+
+
+    align-items:
+
+        center
+
+        !important;
+
+
+
+    justify-content:
+
+        center
+
+        !important;
+
+
+
+    overflow:
+
+        visible
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+.home-discipline-images-identity
+
+.home-discipline-image-01 img {
+
+    display:
+
+        block
+
+        !important;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        clamp(
+
+            320px,
+
+            33vw,
+
+            430px
+
+        )
+
+        !important;
+
+
+
+    max-width:
+
+        100%
+
+        !important;
+
+
+
+    max-height:
+
+        none
+
+        !important;
+
+
+
+    object-fit:
+
+        contain
+
+        !important;
+
+
+
+    object-position:
+
+        center
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   IMAGE 02
+
+========================================================== */
+
+
+
+.home-discipline-images-identity
+
+.home-discipline-image-02 {
+
+    grid-column:
+
+        2;
+
+
+
+    grid-row:
+
+        1;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        100%
+
+        !important;
+
+
+
+    display:
+
+        flex
+
+        !important;
+
+
+
+    align-items:
+
+        center
+
+        !important;
+
+
+
+    justify-content:
+
+        center
+
+        !important;
+
+
+
+    overflow:
+
+        visible
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+.home-discipline-images-identity
+
+.home-discipline-image-02 img {
+
+    display:
+
+        block
+
+        !important;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        clamp(
+
+            320px,
+
+            33vw,
+
+            430px
+
+        )
+
+        !important;
+
+
+
+    max-width:
+
+        100%
+
+        !important;
+
+
+
+    max-height:
+
+        none
+
+        !important;
+
+
+
+    object-fit:
+
+        contain
+
+        !important;
+
+
+
+    object-position:
+
+        center
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   HIDE OTHER IMAGES
+
+========================================================== */
+
+
+
+.home-discipline-images-identity
+
+.home-discipline-image-03,
+
+
+
+.home-discipline-images-identity
+
+.home-discipline-image-04,
+
+
+
+.home-discipline-images-identity
+
+.home-discipline-image-05,
+
+
+
+.home-discipline-images-identity
+
+.home-discipline-image-06 {
+
+    display:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   LARGE DESKTOP
+
+========================================================== */
+
+
+
+@media (min-width: 1700px) {
+
+
+
+    .home-discipline-images-identity {
+
+        width:
+
+            90%
+
+            !important;
+
+
+
+        column-gap:
+
+            20px
+
+            !important;
+
+
+
+/**
+
+           Più spazio dal testo sui monitor grandi
+
+        */
+
+        transform:
+
+            translateX(-35px)
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-01 img,
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-02 img {
+
+        height:
+
+            clamp(
+
+                360px,
+
+                31vw,
+
+                470px
+
+            )
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   LAPTOP
+
+========================================================== */
+
+
+
+@media (max-width: 1440px) {
+
+
+
+    .home-discipline-images-identity {
+
+        width:
+
+            94%
+
+            !important;
+
+
+
+        column-gap:
+
+            16px
+
+            !important;
+
+
+
+        transform:
+
+            translateX(-12px)
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-01 img,
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-02 img {
+
+        height:
+
+            clamp(
+
+                280px,
+
+                31vw,
+
+                390px
+
+            )
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   TABLET
+
+========================================================== */
+
+
+
+@media (max-width: 1000px) {
+
+
+
+    .home-discipline-images-identity {
+
+        width:
+
+            100%
+
+            !important;
+
+
+
+        grid-template-columns:
+
+            1fr
+
+            !important;
+
+
+
+        grid-template-rows:
+
+            auto
+
+            auto
+
+            !important;
+
+
+
+        row-gap:
+
+            16px
+
+            !important;
+
+
+
+        column-gap:
+
+            0
+
+            !important;
+
+
+
+        transform:
+
+            none
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-01 {
+
+        grid-column:
+
+            1;
+
+
+
+        grid-row:
+
+            1;
+
+    }
+
+
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-02 {
+
+        grid-column:
+
+            1;
+
+
+
+        grid-row:
+
+            2;
+
+    }
+
+
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-01 img,
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-02 img {
+
+        width:
+
+            100%
+
+            !important;
+
+
+
+        height:
+
+            auto
+
+            !important;
+
+
+
+        max-height:
+
+            420px
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   MOBILE
+
+========================================================== */
+
+
+
+@media (max-width: 760px) {
+
+
+
+    .home-discipline-images-identity {
+
+        width:
+
+            calc(
+
+                100vw - 36px
+
+            )
+
+            !important;
+
+
+
+        display:
+
+            flex
+
+            !important;
+
+
+
+        flex-direction:
+
+            column
+
+            !important;
+
+
+
+        gap:
+
+            14px
+
+            !important;
+
+
+
+        transform:
+
+            none
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-01,
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-02 {
+
+        width:
+
+            100%
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-01 img,
+
+
+
+    .home-discipline-images-identity
+
+    .home-discipline-image-02 img {
+
+        width:
+
+            100%
+
+            !important;
+
+
+
+        height:
+
+            auto
+
+            !important;
+
+
+
+        max-height:
+
+            none
+
+            !important;
+
+
+
+        object-fit:
+
+            contain
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+/* ==========================================================
+
+   BRANDING
+
+   Sinistra compatta + due immagini grandi a destra
+
+========================================================== */
+
+
+
+.home-discipline-images-branding {
+
+    width: 94% !important;
+
+
+
+    justify-self: start;
+
+
+
+    display: grid !important;
+
+
+
+    grid-template-columns:
+
+        0.62fr
+
+        0.78fr
+
+        0.78fr
+
+        !important;
+
+
+
+    grid-template-rows:
+
+        1fr
+
+        1fr
+
+        !important;
+
+
+
+    column-gap:
+
+        10px
+
+        !important;
+
+
+
+    row-gap:
+
+        0
+
+        !important;
+
+
+
+    align-items:
+
+        stretch
+
+        !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   01 — NIKE BOX
+
+   Spostata verso il basso
+
+========================================================== */
+
+
+
+.home-discipline-images-branding
+
+.home-discipline-image-01 {
+
+    grid-column:
+
+        1;
+
+
+
+    grid-row:
+
+        1;
+
+
+
+    transform:
+
+        translateY(70px)
+
+        !important;
+
+
+
+    z-index:
+
+        2;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   03 — STORE
+
+   Spostato verso l'alto
+
+========================================================== */
+
+
+
+.home-discipline-images-branding
+
+.home-discipline-image-03 {
+
+    grid-column:
+
+        1;
+
+
+
+    grid-row:
+
+        2;
+
+
+
+    transform:
+
+        translateY(-70px)
+
+        !important;
+
+
+
+    z-index:
+
+        2;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   02 — PRIMA IMMAGINE GRANDE DESTRA
+
+========================================================== */
+
+
+
+.home-discipline-images-branding
+
+.home-discipline-image-02 {
+
+    grid-column:
+
+        2;
+
+
+
+    grid-row:
+
+        1 / 3;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   04 — SECONDA IMMAGINE GRANDE DESTRA
+
+========================================================== */
+
+
+
+.home-discipline-images-branding
+
+.home-discipline-image-04 {
+
+    grid-column:
+
+        3;
+
+
+
+    grid-row:
+
+        1 / 3;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   TUTTE LE IMMAGINI BRANDING
+
+========================================================== */
+
+
+
+.home-discipline-images-branding
+
+.home-discipline-image img {
+
+    display:
+
+        block
+
+        !important;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        100%
+
+        !important;
+
+
+
+    max-width:
+
+        100%
+
+        !important;
+
+
+
+    max-height:
+
+        100%
+
+        !important;
+
+
+
+    object-fit:
+
+        contain
+
+        !important;
+
+
+
+    object-position:
+
+        center
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   MOBILE / TABLET
+
+   Rimuove gli spostamenti desktop
+
+========================================================== */
+
+
+
+@media (max-width: 1000px) {
+
+
+
+    .home-discipline-images-branding
+
+    .home-discipline-image-01,
+
+
+
+    .home-discipline-images-branding
+
+    .home-discipline-image-03 {
+
+        transform:
+
+            none
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   EDITORIAL
+
+   Blocco grande a sinistra
+
+   Due poster a destra più vicini verticalmente
+
+========================================================== */
+
+
+
+.home-discipline-images-editorial {
+
+    width: 92% !important;
+
+
+
+    justify-self: start;
+
+
+
+    grid-template-columns:
+
+        1.05fr
+
+        0.78fr
+
+        !important;
+
+
+
+    grid-template-rows:
+
+        1fr
+
+        1fr
+
+        !important;
+
+
+
+    column-gap:
+
+        10px
+
+        !important;
+
+
+
+    row-gap:
+
+        0
+
+        !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   EDITORIAL DESIGN
+
+   Grande a sinistra + 2 poster uguali a destra
+
+========================================================== */
+
+
+
+.home-discipline-images-editorial {
+
+    width: 94% !important;
+
+
+
+    justify-self: start;
+
+
+
+    display: grid !important;
+
+
+
+    grid-template-columns:
+
+        1.18fr
+
+        0.72fr
+
+        !important;
+
+
+
+    grid-template-rows:
+
+        1fr
+
+        1fr
+
+        !important;
+
+
+
+/**
+
+       Questo è lo spazio tra:
+
+       immagine grande ↔ poster destra
+
+    */
+
+    column-gap:
+
+        22px
+
+        !important;
+
+
+
+/**
+
+       Piccolo spazio tra
+
+       Rolling Stone ↕ Velvet
+
+    */
+
+    row-gap:
+
+        10px
+
+        !important;
+
+
+
+    align-items:
+
+        stretch
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   01 — IMMAGINE EDITORIALE GRANDE
+
+========================================================== */
+
+
+
+.home-discipline-images-editorial
+
+.home-discipline-image-01 {
+
+    grid-column:
+
+        1;
+
+
+
+    grid-row:
+
+        1 / 3;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+
+
+    align-items:
+
+        center
+
+        !important;
+
+
+
+    justify-content:
+
+        flex-end
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   02 — ROLLING STONE
+
+========================================================== */
+
+
+
+.home-discipline-images-editorial
+
+.home-discipline-image-02 {
+
+    grid-column:
+
+        2;
+
+
+
+    grid-row:
+
+        1;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+
+
+    align-items:
+
+        stretch
+
+        !important;
+
+
+
+    justify-content:
+
+        flex-start
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   03 — VELVET
+
+========================================================== */
+
+
+
+.home-discipline-images-editorial
+
+.home-discipline-image-03 {
+
+    grid-column:
+
+        2;
+
+
+
+    grid-row:
+
+        2;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+
+
+    align-items:
+
+        stretch
+
+        !important;
+
+
+
+    justify-content:
+
+        flex-start
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   IMMAGINE GRANDE
+
+========================================================== */
+
+
+
+.home-discipline-images-editorial
+
+.home-discipline-image-01 img {
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        100%
+
+        !important;
+
+
+
+    object-fit:
+
+        contain
+
+        !important;
+
+
+
+    object-position:
+
+        right center
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   DUE POSTER DESTRA
+
+   STESSA DIMENSIONE
+
+========================================================== */
+
+
+
+.home-discipline-images-editorial
+
+.home-discipline-image-02 img,
+
+
+
+.home-discipline-images-editorial
+
+.home-discipline-image-03 img {
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        100%
+
+        !important;
+
+
+
+    max-width:
+
+        100%
+
+        !important;
+
+
+
+    max-height:
+
+        100%
+
+        !important;
+
+
+
+    object-fit:
+
+        contain
+
+        !important;
+
+
+
+/**
+
+       Li appoggiamo verso sinistra
+
+       invece di centrarli nella cella.
+
+       È questo che elimina il grosso buco.
+
+    */
+
+    object-position:
+
+        left center
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   TABLET
+
+========================================================== */
+
+
+
+@media (max-width: 1000px) {
+
+
+
+    .home-discipline-images-editorial {
+
+        width:
+
+            100%
+
+            !important;
+
+
+
+        grid-template-columns:
+
+            1.1fr
+
+            0.9fr
+
+            !important;
+
+
+
+        column-gap:
+
+            14px
+
+            !important;
+
+
+
+        row-gap:
+
+            10px
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   MOBILE
+
+========================================================== */
+
+
+
+@media (max-width: 760px) {
+
+
+
+    .home-discipline-images-editorial {
+
+        width:
+
+            calc(100vw - 36px)
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-editorial
+
+    .home-discipline-image-01 img,
+
+
+
+    .home-discipline-images-editorial
+
+    .home-discipline-image-02 img,
+
+
+
+    .home-discipline-images-editorial
+
+    .home-discipline-image-03 img {
+
+        object-position:
+
+            center
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   ART DIRECTION
+
+   Poster molto più vicini tra loro
+
+========================================================== */
+
+
+
+.home-discipline-images-art {
+
+    width: 92% !important;
+
+
+
+    justify-self: start;
+
+
+
+    grid-template-columns:
+
+        0.48fr
+
+        0.94fr
+
+        !important;
+
+
+
+    grid-template-rows:
+
+        0.92fr
+
+        1.08fr
+
+        !important;
+
+
+
+    column-gap:
+
+        0
+
+        !important;
+
+
+
+    row-gap:
+
+        7px
+
+        !important;
+
+}
+
+
+
+
+
+/* poster fashion sopra */
+
+
+
+.home-discipline-images-art
+
+.home-discipline-image-02 {
+
+    grid-column: 1;
+
+    grid-row: 1;
+
+
+
+    transform:
+
+        translateX(68px)
+
+        !important;
+
+}
+
+
+
+
+
+/* poster Nike sotto */
+
+
+
+.home-discipline-images-art
+
+.home-discipline-image-03 {
+
+    grid-column: 1;
+
+    grid-row: 2;
+
+
+
+    transform:
+
+        translateX(68px)
+
+        !important;
+
+}
+
+
+
+
+
+/* poster grande */
+
+
+
+.home-discipline-images-art
+
+.home-discipline-image-01 {
+
+    grid-column: 2;
+
+    grid-row: 1 / 3;
+
+
+
+    transform:
+
+        translateX(-38px)
+
+        !important;
+
+}
+
+
+
+
+
+/* immagini sempre complete */
+
+
+
+.home-discipline-images-art
+
+.home-discipline-image img {
+
+    width: 100% !important;
+
+
+
+    height: 100% !important;
+
+
+
+    object-fit: contain !important;
+
+
+
+    object-position: center !important;
+
+
+
+    transform: none !important;
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   TABLET
+
+========================================================== */
+
+
+
+@media (max-width: 1000px) {
+
+
+
+    .home-discipline-images-art
+
+    .home-discipline-image-01,
+
+
+
+    .home-discipline-images-art
+
+    .home-discipline-image-02,
+
+
+
+    .home-discipline-images-art
+
+    .home-discipline-image-03 {
+
+        transform:
+
+            none
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   MOBILE
+
+========================================================== */
+
+
+
+@media (max-width: 760px) {
+
+
+
+    .home-discipline-images-art {
+
+        width:
+
+            calc(100vw - 36px)
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+/* ==========================================================
+
+   TABLET — RESET SPOSTAMENTI
+
+========================================================== */
+
+
+
+@media (max-width: 1000px) {
+
+
+
+    .home-discipline-images-art
+
+    .home-discipline-image-01,
+
+
+
+    .home-discipline-images-art
+
+    .home-discipline-image-02,
+
+
+
+    .home-discipline-images-art
+
+    .home-discipline-image-03 {
+
+        transform:
+
+            none
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   MOBILE — RESET SPOSTAMENTI
+
+========================================================== */
+
+
+
+@media (max-width: 760px) {
+
+
+
+    .home-discipline-images-art {
+
+        width:
+
+            calc(100vw - 36px)
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* ==========================================================
+
+   DIGITAL COMMUNICATION
+
+   FINAL DESKTOP LAYOUT
+
+
+
+   - due immagini a sinistra
+
+   - Dior grande a destra
+
+   - immagini sempre complete
+
+   - intero gruppo spostato verso destra
+
+========================================================== */
+
+
+
+.home-discipline-images-digital {
+
+    width:
+
+        90%
+
+        !important;
+
+
+
+/**
+
+       IMPORTANTISSIMO:
+
+       invece di stare attaccato al lato sinistro
+
+       della sua colonna, il mosaico viene spinto
+
+       verso il testo.
+
+    */
+
+    justify-self:
+
+        end
+
+        !important;
+
+
+
+    margin-left:
+
+        auto
+
+        !important;
+
+
+
+    margin-right:
+
+        0
+
+        !important;
+
+
+
+
+
+    display:
+
+        grid
+
+        !important;
+
+
+
+    grid-template-columns:
+
+        minmax(
+
+            250px,
+
+            320px
+
+        )
+
+        minmax(
+
+            520px,
+
+            700px
+
+        )
+
+        !important;
+
+
+
+    grid-template-rows:
+
+        auto
+
+        auto
+
+        !important;
+
+
+
+
+
+/* spazio sinistra ↔ Dior */
+
+    column-gap:
+
+        8px
+
+        !important;
+
+
+
+
+
+/* spazio verticale fra i 2 blocchi */
+
+    row-gap:
+
+        12px
+
+        !important;
+
+
+
+
+
+    align-items:
+
+        center
+
+        !important;
+
+
+
+    align-content:
+
+        center
+
+        !important;
+
+
+
+
+
+/**
+
+       Ultimo piccolo avvicinamento verso il testo.
+
+       Non modifica le singole immagini.
+
+    */
+
+    transform:
+
+        translateX(
+
+            42px
+
+        )
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   01 — BURGER / SOCIAL CAMPAIGN
+
+========================================================== */
+
+
+
+.home-discipline-images-digital
+
+.home-discipline-image-01 {
+
+    grid-column:
+
+        1;
+
+
+
+    grid-row:
+
+        1;
+
+
+
+    position:
+
+        relative
+
+        !important;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        auto
+
+        !important;
+
+
+
+    min-height:
+
+        0
+
+        !important;
+
+
+
+    display:
+
+        flex
+
+        !important;
+
+
+
+    align-items:
+
+        flex-end
+
+        !important;
+
+
+
+    justify-content:
+
+        center
+
+        !important;
+
+
+
+    overflow:
+
+        visible
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+.home-discipline-images-digital
+
+.home-discipline-image-01 img {
+
+    display:
+
+        block
+
+        !important;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        auto
+
+        !important;
+
+
+
+    max-width:
+
+        100%
+
+        !important;
+
+
+
+    max-height:
+
+        46vh
+
+        !important;
+
+
+
+    object-fit:
+
+        contain
+
+        !important;
+
+
+
+    object-position:
+
+        center
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   02 — SOCIAL GRID
+
+========================================================== */
+
+
+
+.home-discipline-images-digital
+
+.home-discipline-image-02 {
+
+    grid-column:
+
+        1;
+
+
+
+    grid-row:
+
+        2;
+
+
+
+    position:
+
+        relative
+
+        !important;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        auto
+
+        !important;
+
+
+
+    min-height:
+
+        0
+
+        !important;
+
+
+
+    display:
+
+        flex
+
+        !important;
+
+
+
+    align-items:
+
+        flex-start
+
+        !important;
+
+
+
+    justify-content:
+
+        center
+
+        !important;
+
+
+
+    overflow:
+
+        visible
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+.home-discipline-images-digital
+
+.home-discipline-image-02 img {
+
+    display:
+
+        block
+
+        !important;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        auto
+
+        !important;
+
+
+
+    max-width:
+
+        100%
+
+        !important;
+
+
+
+    max-height:
+
+        31vh
+
+        !important;
+
+
+
+    object-fit:
+
+        contain
+
+        !important;
+
+
+
+    object-position:
+
+        center
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   03 — DIOR
+
+   Grande e completamente visibile
+
+========================================================== */
+
+
+
+.home-discipline-images-digital
+
+.home-discipline-image-03 {
+
+    grid-column:
+
+        2;
+
+
+
+    grid-row:
+
+        1 / 3;
+
+
+
+    position:
+
+        relative
+
+        !important;
+
+
+
+    width:
+
+        100%
+
+        !important;
+
+
+
+    height:
+
+        auto
+
+        !important;
+
+
+
+    min-height:
+
+        0
+
+        !important;
+
+
+
+    display:
+
+        flex
+
+        !important;
+
+
+
+    align-items:
+
+        center
+
+        !important;
+
+
+
+    justify-content:
+
+        flex-start
+
+        !important;
+
+
+
+    overflow:
+
+        visible
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+
+
+    padding:
+
+        0
+
+        !important;
+
+}
+
+
+
+
+
+.home-discipline-images-digital
+
+.home-discipline-image-03 img {
+
+    display:
+
+        block
+
+        !important;
+
+
+
+    width:
+
+        auto
+
+        !important;
+
+
+
+    height:
+
+        min(
+
+            82vh,
+
+            760px
+
+        )
+
+        !important;
+
+
+
+    max-width:
+
+        100%
+
+        !important;
+
+
+
+    max-height:
+
+        82vh
+
+        !important;
+
+
+
+    object-fit:
+
+        contain
+
+        !important;
+
+
+
+    object-position:
+
+        left center
+
+        !important;
+
+
+
+    transform:
+
+        none
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   PREVENT CROPPING
+
+========================================================== */
+
+
+
+.home-discipline-images-digital
+
+.home-discipline-image,
+
+
+
+.home-discipline-images-digital
+
+.home-discipline-image img {
+
+    overflow:
+
+        visible
+
+        !important;
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   LARGE DESKTOP
+
+========================================================== */
+
+
+
+@media
+
+(min-width: 1700px) {
+
+
+
+    .home-discipline-images-digital {
+
+        width:
+
+            89%
+
+            !important;
+
+
+
+        transform:
+
+            translateX(
+
+                55px
+
+            )
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   LAPTOP
+
+========================================================== */
+
+
+
+@media
+
+(max-width: 1440px) {
+
+
+
+    .home-discipline-images-digital {
+
+        width:
+
+            92%
+
+            !important;
+
+
+
+        grid-template-columns:
+
+            minmax(
+
+                220px,
+
+                290px
+
+            )
+
+            minmax(
+
+                440px,
+
+                620px
+
+            )
+
+            !important;
+
+
+
+        column-gap:
+
+            7px
+
+            !important;
+
+
+
+        row-gap:
+
+            10px
+
+            !important;
+
+
+
+        transform:
+
+            translateX(
+
+                25px
+
+            )
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-01 img {
+
+        max-height:
+
+            40vh
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-02 img {
+
+        max-height:
+
+            28vh
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-03 img {
+
+        height:
+
+            min(
+
+                78vh,
+
+                680px
+
+            )
+
+            !important;
+
+
+
+        max-height:
+
+            78vh
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   TABLET
+
+========================================================== */
+
+
+
+@media
+
+(max-width: 1100px) {
+
+
+
+    .home-discipline-images-digital {
+
+        width:
+
+            100%
+
+            !important;
+
+
+
+        grid-template-columns:
+
+            minmax(
+
+                190px,
+
+                240px
+
+            )
+
+            minmax(
+
+                340px,
+
+                1fr
+
+            )
+
+            !important;
+
+
+
+        column-gap:
+
+            6px
+
+            !important;
+
+
+
+        row-gap:
+
+            10px
+
+            !important;
+
+
+
+        transform:
+
+            none
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-01 img {
+
+        max-height:
+
+            34vh
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-02 img {
+
+        max-height:
+
+            24vh
+
+            !important;
+
+    }
+
+
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-03 img {
+
+        width:
+
+            100%
+
+            !important;
+
+
+
+        height:
+
+            auto
+
+            !important;
+
+
+
+        max-height:
+
+            70vh
+
+            !important;
+
+
+
+        object-position:
+
+            left center
+
+            !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+/* ==========================================================
+
+   MOBILE
+
+========================================================== */
+
+
+
+@media
+
+(max-width: 760px) {
+
+
+
+    .home-discipline-images-digital {
+
+        width:
+
+            calc(
+
+                100vw - 36px
+
+            )
+
+            !important;
+
+
+
+        display:
+
+            flex
+
+            !important;
+
+
+
+        flex-direction:
+
+            row
+
+            !important;
+
+
+
+        grid-template-columns:
+
+            none
+
+            !important;
+
+
+
+        grid-template-rows:
+
+            none
+
+            !important;
+
+
+
+        gap:
+
+            14px
+
+            !important;
+
+
+
+        margin:
+
+            0
+
+            !important;
+
+
+
+        transform:
+
+            none
+
+            !important;
+
+
+
+        align-items:
+
+            stretch
+
+            !important;
+
+
+
+        align-content:
+
+            normal
+
+            !important;
+
+
+
+        overflow-x:
+
+            auto
+
+            !important;
+
+
+
+        overflow-y:
+
+            hidden
+
+            !important;
+
+
+
+        scroll-snap-type:
+
+            x mandatory;
+
+
+
+        -webkit-overflow-scrolling:
+
+            touch;
+
+    }
+
+
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-01,
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-02,
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-03 {
+
+        width:
+
+            82vw
+
+            !important;
+
+
+
+        min-width:
+
+            82vw
+
+            !important;
+
+
+
+        height:
+
+            min(
+
+                68vh,
+
+                560px
+
+            )
+
+            !important;
+
+
+
+        flex:
+
+            0
+
+            0
+
+            82vw
+
+            !important;
+
+
+
+        display:
+
+            flex
+
+            !important;
+
+
+
+        align-items:
+
+            center
+
+            !important;
+
+
+
+        justify-content:
+
+            center
+
+            !important;
+
+
+
+        scroll-snap-align:
+
+            start;
+
+    }
+
+
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-01 img,
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-02 img,
+
+
+
+    .home-discipline-images-digital
+
+    .home-discipline-image-03 img {
+
+        width:
+
+            100%
+
+            !important;
+
+
+
+        height:
+
+            100%
+
+            !important;
+
+
+
+        max-width:
+
+            100%
+
+            !important;
+
+
+
+        max-height:
+
+            100%
+
+            !important;
+
+
+
+        object-fit:
+
+            contain
+
+            !important;
+
+
+
+        object-position:
+
+            center
+
+            !important;
+
+    }
+
+
+
+}
+
+/* ==========================================================
+   FINAL CANONICAL MOSAIC OVERRIDE
+   27 / 09 / 2026
+
+   This replaces the repeated/conflicting desktop overrides
+   that had accumulated at the end of the file.
+
+   Desktop targets:
+   - Visual Identity: only image 02, large and centered
+   - Editorial: large left + 2 right, visually closer
+   - Art Direction: large left + 2 equal-width right posters
+   - Digital: Dior large left + 2 equal-width right images
+========================================================== */
+
+@media (min-width: 1001px) {
+
+    /* ======================================================
+       VISUAL IDENTITY
+    ====================================================== */
+
+    .home-discipline-images-identity {
+        width: 94% !important;
+        height: min(76vh, 760px) !important;
+        min-height: 580px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        justify-self: center !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-identity .home-discipline-image-01 {
+        display: none !important;
+    }
+
+    .home-discipline-images-identity .home-discipline-image-02 {
+        position: relative !important;
+
+        width: min(860px, 96%) !important;
+        height: min(72vh, 720px) !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 0 auto !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-identity .home-discipline-image-02 img {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: center center !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        transform: none !important;
+    }
+
+
+    /* ======================================================
+       EDITORIAL DESIGN
+       Large image left + two posters right.
+       The visible images are aligned toward each other so
+       the black empty space in the middle is removed.
+    ====================================================== */
+
+    .home-discipline-images-editorial {
+        width: 94% !important;
+        height: min(78vh, 780px) !important;
+        min-height: 600px !important;
+
+        justify-self: center !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1.26fr)
+            minmax(250px, 0.74fr)
+            !important;
+
+        grid-template-rows:
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            !important;
+
+        column-gap: 8px !important;
+        row-gap: 8px !important;
+
+        align-items: stretch !important;
+        align-content: center !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-editorial .home-discipline-image-01 {
+        grid-column: 1 !important;
+        grid-row: 1 / 3 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        margin: 0 !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-editorial .home-discipline-image-02,
+    .home-discipline-images-editorial .home-discipline-image-03 {
+        grid-column: 2 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        margin: 0 !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-editorial .home-discipline-image-02 {
+        grid-row: 1 !important;
+    }
+
+    .home-discipline-images-editorial .home-discipline-image-03 {
+        grid-row: 2 !important;
+    }
+
+    .home-discipline-images-editorial .home-discipline-image-01 img {
+        display: block !important;
+
+        width: auto !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: right center !important;
+
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-editorial .home-discipline-image-02 img,
+    .home-discipline-images-editorial .home-discipline-image-03 img {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: left center !important;
+
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+
+    /* ======================================================
+       ART DIRECTION
+       Large image left.
+       The two right posters have exactly the same visible width.
+       JUST DON'T QUIT therefore becomes as wide as the poster
+       above it, while remaining completely visible.
+    ====================================================== */
+
+    .home-discipline-images-art {
+        width: 94% !important;
+        height: min(78vh, 780px) !important;
+        min-height: 600px !important;
+
+        justify-self: center !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1.28fr)
+            minmax(270px, 0.72fr)
+            !important;
+
+        grid-template-rows:
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            !important;
+
+        column-gap: 8px !important;
+        row-gap: 10px !important;
+
+        align-items: stretch !important;
+        align-content: center !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-art .home-discipline-image-01 {
+        grid-column: 1 !important;
+        grid-row: 1 / 3 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        margin: 0 !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-art .home-discipline-image-02,
+    .home-discipline-images-art .home-discipline-image-03 {
+        grid-column: 2 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        margin: 0 !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-art .home-discipline-image-02 {
+        grid-row: 1 !important;
+    }
+
+    .home-discipline-images-art .home-discipline-image-03 {
+        grid-row: 2 !important;
+    }
+
+    .home-discipline-images-art .home-discipline-image-01 img {
+        display: block !important;
+
+        width: auto !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: right center !important;
+
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-art .home-discipline-image-02 img,
+    .home-discipline-images-art .home-discipline-image-03 img {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: left center !important;
+
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+
+    /* ======================================================
+       DIGITAL COMMUNICATION
+       Image 03 = Dior / phone, large on the left.
+       Image 01 = burger grid, top right.
+       Image 02 = social grid, bottom right.
+
+       Both right images are forced to exactly the same visible
+       width, so the burger rectangle is as wide as the one below.
+    ====================================================== */
+
+    .home-discipline-images-digital {
+        width: 94% !important;
+        height: min(78vh, 780px) !important;
+        min-height: 600px !important;
+
+        justify-self: center !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1.18fr)
+            minmax(320px, 0.82fr)
+            !important;
+
+        grid-template-rows:
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            !important;
+
+        column-gap: 10px !important;
+        row-gap: 10px !important;
+
+        align-items: stretch !important;
+        align-content: center !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-digital .home-discipline-image-03 {
+        grid-column: 1 !important;
+        grid-row: 1 / 3 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+
+        margin: 0 !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-digital .home-discipline-image-01,
+    .home-discipline-images-digital .home-discipline-image-02 {
+        grid-column: 2 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        margin: 0 !important;
+
+        overflow: visible !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-digital .home-discipline-image-01 {
+        grid-row: 1 !important;
+    }
+
+    .home-discipline-images-digital .home-discipline-image-02 {
+        grid-row: 2 !important;
+    }
+
+    .home-discipline-images-digital .home-discipline-image-03 img {
+        display: block !important;
+
+        width: auto !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: right center !important;
+
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    .home-discipline-images-digital .home-discipline-image-01 img,
+    .home-discipline-images-digital .home-discipline-image-02 img {
+        display: block !important;
+
+        width: 100% !important;
+        height: auto !important;
+
+        max-width: 100% !important;
+        max-height: 100% !important;
+
+        object-fit: contain !important;
+        object-position: left center !important;
+
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+}
